@@ -1,0 +1,108 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reservas Barberia</title>
+ 
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s8 offset-s2">
+                <div id="contenido" class="m2">
+                    
+                    <header id="header" class=" waves-light light-blue darken-2">
+                       
+                    </header>
+                    
+                    <form id="enviar-reserva" className="bg-black p-12 bordered" action="#" class="col s10 offset-s1">
+                        <img src="logo.png" class="imgLogo">
+        
+                        <h1 class="formulario__titulo " style= font-size:40pt >CLIPPER BARBERS SHOP</h1>
+                        <h2 class="formulario__titulo, formulario__subtitulo, formulario__parrafo" style= font-size:32pt>Reserva tu Cita</h2>
+                        <p class="formulario__parrafo"  style= font-size:12pt>Llena este pequeño formulario para agendar tu cita.</p>
+                        <div className="form-group">
+                            <label  htmlFor="nombre"  class="formulario__label"style= font-size:14pt>¿Cuál es tu nombre?</label>
+                            <input 
+                                type="text" 
+                                class="materialize-textarea" 
+                                id="cliente" 
+                                name="nombre" 
+                                placeholder="Nombre Completo" 
+                            />
+                        </div>
+                                <div className="form-group">
+                                    <label htmlFor="fecha" class="formulario__label" style= font-size:14pt>Indica la fecha de tu reserva</label>
+                                    <input 
+                                        type="date" 
+                                        class="materialize-textarea" 
+                                        id="fecha" 
+                                        name="fecha"  
+                                        pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="hora"class="formulario__label" style= font-size:14pt>Indica la hora de tu reserva</label>
+                                    <input 
+                                        type="time" 
+                                        class="materialize-textarea" 
+                                        id="hora" 
+                                        name="hora"  
+                                    />
+                                  
+                                </div>
+                                <div className="form-group">
+                            
+                                <label htmlfor="empleado" class="formulario__label" style= font-size:14pt>EMPLEADO de preferencia</label>
+                            <select id="empleado" name="listaempleados" class="formulario__input">
+                                 <option>EMPLEADO 1</option>
+                                <option>EMPLEADO 2</option>
+                                 </select>
+                                </div>
+                               
+                                  <div class="form-group"> 
+                                    <label for="servicio" class="formulario__label" style= font-size:14pt>¿Cuál es el servicio que se desea realizar?</label>
+                                    <select id="servicio" name="listaservicios" class="formulario__input">
+                                        <option>SERVICIO 1 - $VALOR</option>
+                                        <option>SERVICIO 2 - $VALOR</option>
+                                        <option>SERVICIO 3 - $VALOR</option>
+                                        <option>SERVICIO 4 - $VALOR</option>
+                                        <option>SERVICIO 5 - $VALOR</option>
+                                        
+                                    </select>
+                                    </div> 
+                        <div id="respuesta"></div>
+                        <div class="row">
+                                <div class="col s6">
+                                    <button id="enviar" class="btn waves-effect waves-light  green darken-2" type="submit" name="action">Enviar a WhatsApp
+                                            <i class="material-icons right">send</i>
+                                    </button>
+
+                                </div>
+                                <div class="col s6">
+                                    <button id="resetBtn" class="btn waves-effect waves-light light-blue darken-2" type="submit">Reset
+                                            <i class="material-icons right">delete</i>
+                                    </button>
+                                </div>
+                        </div>
+                        
+                </form> 
+            </div> <!--.contenido-->
+        </div>
+    </div>
+    
+</div>
+    
+    <script src="js/form.js"></script>
+    
+</body>
+
+</html>
